@@ -1,0 +1,217 @@
+Bit_0  = False
+Bit_1  = False
+Bit_2  = False
+Bit_3  = False
+Bit_4  = False
+Bit_5  = False
+Bit_6  = False
+Bit_7  = False
+Bit_8  = False
+Bit_9  = False
+Bit_10 = False
+Bit_11 = False
+Bit_12 = False
+Bit_13 = False
+Bit_14 = False
+Bit_15 = False
+Bit_16 = False
+Bit_17 = False
+Bit_18 = False
+Bit_19 = False
+Bit_20 = False
+Num_Out = 0
+#this converts numbers into a readable form for the bit converter
+Bit_In_list = []
+
+print("start adding the digits of binary ONLY 1 & 0 or code will break (up to 20) type 'done'when you are finished")
+
+# This loop will continue until the user types 'done'
+while True:
+    # Get user input for one item
+    item = input("Add the next character: ")
+    
+    # Check if the user is finished
+    if item.lower() == 'done':
+        # This exits the loop
+        break 
+    
+    # This is the correct placement for the append statement
+    Bit_In_list.append(item)
+number_of_items = len(Bit_In_list)
+attemptnum = 0
+if attemptnum < number_of_items:
+    if Bit_In_list[0] == "0":
+        Bit_0 = False
+    elif Bit_In_list[0] == "1":
+        Bit_0 = True
+attemptnum = 1
+if attemptnum < number_of_items:
+    if Bit_In_list[1] == "0":
+     Bit_1 = False
+    elif Bit_In_list[1] == "1":
+      Bit_1 = True
+attemptnum = 2
+if attemptnum < number_of_items:
+    if Bit_In_list[2] == "0":
+        Bit_2 = False
+    elif Bit_In_list[2] == "1":
+        Bit_2 = True
+attemptnum = 3
+if attemptnum < number_of_items:
+    if Bit_In_list[3] == "0":
+        Bit_3 = False
+    elif Bit_In_list[3] == "1":
+       Bit_3 = True
+attemptnum = 4
+if attemptnum < number_of_items:
+    if Bit_In_list[4] == "0":
+        Bit_4 = False
+    elif Bit_In_list[4] == "1":
+        Bit_4 = True
+attemptnum = 5
+if attemptnum < number_of_items:
+    if Bit_In_list[5] == "0":
+        Bit_5 = False
+    elif Bit_In_list[5] == "1":
+        Bit_5 = True
+attemptnum = 6
+if attemptnum < number_of_items:
+    if Bit_In_list[6] == "0":
+        Bit_6 = False
+    elif Bit_In_list[6] == "1":
+        Bit_6 = True
+attemptnum = 7
+if attemptnum < number_of_items:
+    if Bit_In_list[7] == "0":
+        Bit_7 = False
+    elif Bit_In_list[7] == "1":
+        Bit_7 = True
+attemptnum = 8
+if attemptnum < number_of_items:
+    if Bit_In_list[8] == "0":
+        Bit_8 = False
+    elif Bit_In_list[8] == "1":
+        Bit_8 = True
+attemptnum = 9
+if attemptnum < number_of_items:
+    if Bit_In_list[9] == "0":
+        Bit_9 = False
+    elif Bit_In_list[9] == "1":
+        Bit_9 = True
+attemptnum = 10
+if attemptnum < number_of_items:
+    if Bit_In_list[10] == "0":
+        Bit_10 = False
+    elif Bit_In_list[10] == "1":
+        Bit_10 = True
+attemptnum = 11
+if attemptnum < number_of_items:
+    if Bit_In_list[11] == "0":
+        Bit_11 = False
+    elif Bit_In_list[11] == "1":
+        Bit_11 = True
+attemptnum = 12
+if attemptnum < number_of_items:
+    if Bit_In_list[12] == "0":
+        Bit_12 = False
+    elif Bit_In_list[12] == "1":
+        Bit_12 = True
+attemptnum = 13
+if attemptnum < number_of_items:
+    if Bit_In_list[13] == "0":
+        Bit_13 = False
+    elif Bit_In_list[13] == "1":
+        Bit_13 = True
+attemptnum = 14
+if attemptnum < number_of_items:
+    if Bit_In_list[14] == "0":
+        Bit_14 = False
+    elif Bit_In_list[14] == "1":
+        Bit_14 = True
+attemptnum = 15
+if attemptnum < number_of_items:
+    if Bit_In_list[15] == "0":
+        Bit_15 = False
+    elif Bit_In_list[15] == "1":
+       Bit_15 = True
+attemptnum = 16
+if attemptnum < number_of_items:
+    if Bit_In_list[16] == "0":
+        Bit_16 = False
+    elif Bit_In_list[16] == "1":
+        Bit_16 = True
+attemptnum = 17
+if attemptnum < number_of_items:
+    if Bit_In_list[17] == "0":
+        Bit_17 = False
+    elif Bit_In_list[17] == "1":
+        Bit_17 = True
+attemptnum = 18
+if attemptnum < number_of_items:
+    if Bit_In_list[18] == "0":
+        Bit_18 = False
+    elif Bit_In_list[18] == "1":
+        Bit_18 = True
+attemptnum = 19
+if attemptnum < number_of_items:
+    if Bit_In_list[19] == "0":
+        Bit_19 = False
+    elif Bit_In_list[19] == "1":
+        Bit_19 = True
+attemptnum = 20
+if attemptnum < number_of_items:
+    if Bit_In_list[20] == "0":
+        Bit_20 = False
+    elif Bit_In_list[20] == "1":
+        Bit_20 = True
+
+# This segment is onverting bits to numbers(binary)
+if Bit_0 == True:
+    Num_Out += 1
+if Bit_1 == True:
+     Num_Out += 2
+if Bit_2 == True:
+    Num_Out += 4
+if Bit_3 == True:
+    Num_Out += 8       
+if Bit_4 == True:
+    Num_Out += 16
+if Bit_5 == True:
+    Num_Out += 32
+if Bit_6 == True:
+    Num_Out += 64
+if Bit_7 == True:
+    Num_Out += 128
+if Bit_8 == True:
+     Num_Out += 256
+if Bit_9 == True:
+     Num_Out += 512
+if Bit_10 == True:
+    Num_Out += 1024
+if Bit_11 == True:
+    Num_Out += 2048
+if Bit_12 == True:
+    Num_Out += 4096
+if Bit_13 == True:
+    Num_Out += 8192
+if Bit_14 == True:
+    Num_Out += 16384
+if Bit_15 == True:
+    Num_Out += 32768
+if Bit_16 == True:
+    Num_Out += 65536
+if Bit_17 == True:
+    Num_Out += 131072
+if Bit_18 == True:
+    Num_Out += 262144
+if Bit_19 == True:
+    Num_Out += 524288
+if Bit_20 == True:
+    Num_Out += 1048576
+
+print (Num_Out)
+                                                                        
+
+
+
+

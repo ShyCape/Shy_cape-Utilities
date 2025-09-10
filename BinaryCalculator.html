@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary to Decimal Converter</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            margin: 10px 0;
+            width: 200px;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Binary to Decimal Converter</h1>
+        <p>Enter a binary number (e.g., 1011):</p>
+        <input type="text" id="binaryInput" placeholder="10110">
+        <p id="result">Decimal value: 0</p>
+        <p class="error" id="error"></p>
+    </div>
+
+    <script>
+        // Get the HTML elements we need
+        const binaryInput = document.getElementById('binaryInput');
+        const resultDisplay = document.getElementById('result');
+        const errorDisplay = document.getElementById('error');
+
+        // Listen for changes in the input field
+        binaryInput.addEventListener('input', () => {
+            const binaryString = binaryInput.value;
+            
+            // Check if the input is a valid binary number
+            if (!/^[01]+$/.test(binaryString) && binaryString !== '') {
+                errorDisplay.textContent = "Error: Please enter only 1s and 0s.";
+                resultDisplay.textContent = "Decimal value: ?";
+                return; // Stop execution if invalid input
+            } else {
+                errorDisplay.textContent = ""; // Clear the error message
+            }
+
+            // Convert the binary string to a decimal number
+            const decimalValue = parseInt(binaryString, 2);
+
+            // Display the result
+            if (isNaN(decimalValue)) {
+                resultDisplay.textContent = "Decimal value: 0";
+            } else {
+                resultDisplay.textContent = `Decimal value: ${decimalValue}`;
+            }
+        });
+    </script>
+
+</body>
+</html>
